@@ -1,0 +1,26 @@
+package com.example.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+@RequestMapping("/home")
+public class HomeController {
+
+	@RequestMapping("/1")
+	public String pagina1() {
+		return "index.jsp";
+	}
+	
+	/*@RequestMapping(value="/get", method = RequestMethod.GET)
+	public String pagina2() {
+		return "Hola mundo2 desde main";
+	}
+	
+	@RequestMapping("/2/3/4")
+	public String pagina3() {
+		return "Hola mundo2/3/4 desde main";
+	}
+	*/
+}

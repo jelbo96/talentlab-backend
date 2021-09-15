@@ -1,0 +1,16 @@
+package com.example.demo.services;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmpleadoService {
+
+	//Logica de negocio
+	
+	private final EmpleadoService er;
+	public EmpleadoService(EmpleadoRepository empleadoRepository) {
+		this.er = empleadoRepository;
+	}
+
+	
+}

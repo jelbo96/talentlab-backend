@@ -1,0 +1,11 @@
+package com.example.demo.repositories;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface EmpleadoRepository {
+
+	//Interacion con la base de datos
+
+	//Metodos que heredaremos de otras clases (CRUD Y JPA)
+}

@@ -1,0 +1,15 @@
+package com.example.demo.models;
+
+public class Empleado {
+	 //rut, nombre, apellido, edad, profesion, cargo
+	
+	private String rut;
+	private String nombre;
+	private String apellido;
+	private Integer edad;
+	private String profesion;
+	private String cargo;
+	
+	
+	
+}

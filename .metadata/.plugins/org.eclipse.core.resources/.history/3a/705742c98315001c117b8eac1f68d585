@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>empleado</title>
+</head>
+
+<body>
+	<div>
+
+		<form:form action="/empleado/crear" method="post" modelAttribute="empleado">
+	
+
+			<form:label for="rut">Rut:</form:label>
+			<form:label input type="text" name="rut">
+			
+			<form:label for="nombre">Nombre:</form:label>
+			<form:label input type="text" name="nombre">
+			
+			<form:label for="apellido">Apellido:</form:label>
+			<form:label input type="text" name="apellido">
+			
+			<form:label for="edad">Edad:</label>
+			<form:label input type="text" name="edad">
+			
+			<form:label for="profesion">Profesion</form:label>
+			<form:label input type="text" name="profesion">
+			
+			<form:label for="cargo">Cargo</label>
+			<form:label input type="text" name="cargo">
+			
+			
+			<input type="submit" value="Crear Empleado">
+		
+		</form:form>
+	
+	</div>
+</body>
+
+</html>

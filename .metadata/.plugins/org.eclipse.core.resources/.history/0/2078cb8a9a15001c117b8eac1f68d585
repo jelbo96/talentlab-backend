@@ -1,0 +1,63 @@
+package com.example.demo.controllers;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.example.demo.models.Empleado;
+import com.example.demo.services.EmpleadoService;
+
+@Controller
+@RequestMapping("/empleado")
+public class EmpleadoController {
+	
+	//Dependencia con el service
+	private final EmpleadoService es;
+	public EmpleadoController(EmpleadoService empleadoService) {
+		this.es = empleadoService;
+	}
+
+	@RequestMapping("")
+	public String index(@ModelAttribute("empleado") Empleado empleado, Model model) {
+		
+		List<Empleado> lista_empleados = es.findAll();
+		model.addAttribute("lista_empleados", lista_empleados);
+		return "empleado.jsp";
+	}
+	
+	@RequestMapping(value = "/crear", method = RequestMethod.POST)
+	public String crear(@Valid @ModelAttribute("empleado") Empleado empleado) {
+		System.out.println("Crear"+ empleado.getRut());
+		//llamado a guadar el objeto empleado		
+		Empleado empleado1 = es.crearEmpleado(empleado);
+		return "redirect:/empleado";
+	}
+	
+	@RequestMapping("/actualizar")
+	public String actualizar() {
+		System.out.println("Actualizar");
+		return "OK actualizar";
+	}
+	
+	@RequestMapping(value="/eliminar/{id}", method= RequestMethod.POST)
+	public String eliminar(@PathVariable("id") Long id) {
+		System.out.println("Eliminar" + id);
+		return "OK eliminar";
+	}
+	
+	@RequestMapping("/buscar")
+	public String buscar() {
+		System.out.println("Buscar");
+		return "OK buscar";
+	}
+	
+	
+	
+}

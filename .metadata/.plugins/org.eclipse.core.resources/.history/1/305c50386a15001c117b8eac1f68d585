@@ -1,0 +1,81 @@
+package com.example.demo.models;
+
+public class Empleado {
+	 //rut, nombre, apellido, edad, profesion, cargo
+	
+	private String rut;
+	private String nombre;
+	private String apellido;
+	private Integer edad;
+	private String profesion;
+	private String cargo;
+	
+	
+	public Empleado() {  //Constructor vacio
+		super();
+	}
+
+	public Empleado(String rut, String nombre, String apellido, Integer edad, String profesion, String cargo) {
+		super();
+		this.rut = rut;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.edad = edad;
+		this.profesion = profesion;
+		this.cargo = cargo;
+	}
+
+	//Getters-Setters
+	public String getRut() {
+		return rut;
+	}
+
+	public void setRut(String rut) {
+		this.rut = rut;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public Integer getEdad() {
+		return edad;
+	}
+
+	public void setEdad(Integer edad) {
+		this.edad = edad;
+	}
+
+	public String getProfesion() {
+		return profesion;
+	}
+
+	public void setProfesion(String profesion) {
+		this.profesion = profesion;
+	}
+
+	public String getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+	
+	
+	
+	
+	
+}
