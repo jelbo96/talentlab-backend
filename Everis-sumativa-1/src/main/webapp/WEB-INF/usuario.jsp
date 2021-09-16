@@ -12,11 +12,18 @@
 </head>
 
 <body>
+
+	<a href="/usuario">Usuarios</a>
+	<a href="/venta">Ventas</a>
+	<a href="/producto">Productos</a>
 	<div>
+
+		<h4 class="text-danger">
+			<c:out value="${error}"></c:out>
+		</h4>
 
 		<form:form action="/usuario/crear" method="post"
 			modelAttribute="usuario">
-
 
 			<form:label path="rut">Rut:</form:label>
 			<form:input type="text" path="rut" />
@@ -28,7 +35,7 @@
 			<form:input type="text" path="apellido" />
 
 			<form:label path="edad">Edad:</form:label>
-			<form:input type="text" path="edad" />
+			<form:input type="number" min="0" step="1" path="edad" />
 
 			<input type="submit" value="Crear Usuario">
 

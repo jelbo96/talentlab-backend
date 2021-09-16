@@ -13,8 +13,12 @@
 
 <body>
 	<div>
+		<h4 class="text-danger">
+			<c:out value="${error}"></c:out>
+		</h4>
+
 		<form:form action="/usuario/modificar" method="post"
-			modelAttribute="usuario">	
+			modelAttribute="usuario">
 			<form:hidden path="id" />
 
 			<form:label path="rut">Rut:</form:label>
@@ -27,7 +31,7 @@
 			<form:input type="text" path="apellido" />
 
 			<form:label path="edad">Edad:</form:label>
-			<form:input type="text" path="edad" />
+			<form:input type="number" min="0" step="1" path="edad" />
 
 			<input type="submit" value="Confirmar Edición">
 		</form:form>

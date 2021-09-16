@@ -12,18 +12,26 @@
 </head>
 
 <body>
+
+	<a href="/usuario">Usuarios</a>
+	<a href="/venta">Ventas</a>
+	<a href="/producto">Productos</a>
+
 	<div>
 
-		<form:form action="/venta/crear" method="post" modelAttribute="venta">
+		<h4 class="text-danger">
+			<c:out value="${error}"></c:out>
+		</h4>
 
+		<form:form action="/venta/crear" method="post" modelAttribute="venta">
 
 			<!-- monto_total, numero de productos, observaciones, vendedor -->
 
 			<form:label path="monto_total">Monto Total:</form:label>
-			<form:input type="text" path="monto_total" />
+			<form:input type="number" path="monto_total" />
 
 			<form:label path="numero_de_productos">Número de Productos:</form:label>
-			<form:input type="text" path="numero_de_productos" />
+			<form:input type="number" min="0" step="1" path="numero_de_productos" />
 
 			<form:label path="observaciones">Observaciones:</form:label>
 			<form:input type="text" path="observaciones" />

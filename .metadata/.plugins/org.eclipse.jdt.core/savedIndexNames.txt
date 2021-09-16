@@ -76,7 +76,6 @@ INDEX VERSION 1.131+C:\Users\nacho\Documents\java-spring\.metadata\.plugins\org.
 1344133960.index
 908976909.index
 293126076.index
-2492469259.index
 3480696703.index
 3151847187.index
 2852582825.index
